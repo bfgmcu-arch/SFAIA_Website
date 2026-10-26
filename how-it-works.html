@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How it works - Process for getting free AI assistance from Students for AI Accessibility.">
+    <title>How It Works - Students for AI Accessibility</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .steps {
+            list-style: none;
+            counter-reset: my-awesome-counter;
+        }
+        .step-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 3rem;
+        }
+        .step-item::before {
+            counter-increment: my-awesome-counter;
+            content: counter(my-awesome-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background-color: var(--primary-blue);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .step-item h3 {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">SFAIA</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="how-it-works.html" class="nav-link active">How It Works</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="padding: 2rem 5%;">
+            <h1>How It Works</h1>
+            <p>Our simple 4-step process to getting started.</p>
+        </section>
+
+        <div class="container">
+            <section class="section">
+                <div style="padding: 0 5%;">
+                    <h2 class="section-title">The Process</h2>
+                    <ol class="steps">
+                        <li class="step-item">
+                            <h3>Business Contacts Organization</h3>
+                            <p>Reach out to us to express your interest in receiving free AI assistance for your small business.</p>
+                        </li>
+                        <li class="step-item">
+                            <h3>Appointment is Scheduled</h3>
+                            <p>We will get back to you to set up a convenient time to meet at your business location.</p>
+                        </li>
+                        <li class="step-item">
+                            <h3>Students Install the Software</h3>
+                            <p>Our student team will arrive at your location and install the local AI software on your computers.</p>
+                        </li>
+                        <li class="step-item">
+                            <h3>Demonstration is Provided</h3>
+                            <p>After installation, we will provide a complete demonstration of the software so you know exactly how to use it.</p>
+                        </li>
+                    </ol>
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <a href="contact.html" class="btn btn-primary" style="background-color: var(--primary-blue); color: white;">Get Started Today</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Students for AI Accessibility. Based in New Hyde Park.</p>
+        <p>Empowering local business through accessible AI.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
