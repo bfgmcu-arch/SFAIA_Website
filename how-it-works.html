@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="How it works - Process for getting free AI assistance from Students for AI Accessibility.">
     <title>How It Works - Students for AI Accessibility</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <style>
         .steps {
             list-style: none;
             counter-reset: my-awesome-counter;
+            max-width: 800px;
+            margin: 0 auto;
         }
         .step-item {
             position: relative;
-            margin-bottom: 2rem;
-            padding-left: 3rem;
+            margin-bottom: 3rem;
+            padding-left: 4rem;
         }
         .step-item::before {
             counter-increment: my-awesome-counter;
@@ -22,15 +27,17 @@
             position: absolute;
             left: 0;
             top: 0;
-            width: 2rem;
-            height: 2rem;
+            width: 2.5rem;
+            height: 2.5rem;
             border-radius: 50%;
-            background-color: var(--primary-blue);
+            background-color: var(--secondary-blue);
             color: var(--text-light);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 10px rgba(0, 86, 210, 0.3);
         }
         .step-item h3 {
             margin-bottom: 0.5rem;
@@ -64,7 +71,7 @@
 
         <div class="container">
             <section class="section">
-                <div style="padding: 0 5%;">
+                <div>
                     <h2 class="section-title">The Process</h2>
                     <ol class="steps">
                         <li class="step-item">
@@ -84,8 +91,8 @@
                             <p>After installation, we will provide a complete demonstration of the software so you know exactly how to use it.</p>
                         </li>
                     </ol>
-                    <div style="text-align: center; margin-top: 3rem;">
-                        <a href="contact.html" class="btn btn-primary" style="background-color: var(--primary-blue); color: white;">Get Started Today</a>
+                    <div style="text-align: center; margin-top: 4rem;">
+                        <a href="contact.html" class="btn btn-secondary">Get Started Today</a>
                     </div>
                 </div>
             </section>
