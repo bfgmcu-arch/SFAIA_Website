@@ -14,6 +14,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }));
     }
 
+    // Form Submission
+    const meetingForm = document.getElementById('meeting-form');
+    if (meetingForm) {
+        meetingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const business = document.getElementById('business').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const toEmail = "studentsforaiaccessability@outlook.com";
+            const subject = encodeURIComponent(`Meeting Request: ${business}`);
+            const body = encodeURIComponent(
+                `Name: ${name}\n` +
+                `Business Name: ${business}\n` +
+                `Email: ${email}\n\n` +
+                `Message:\n${message}`
+            );
+
+            const mailtoLink = `mailto:${toEmail}?cc=${encodeURIComponent(email)}&subject=${subject}&body=${body}`;
+            window.location.href = mailtoLink;
+        });
+    }
+
     // Scroll Reveal Animation via IntersectionObserver
     const revealElements = document.querySelectorAll('.reveal');
     const revealOptions = {
