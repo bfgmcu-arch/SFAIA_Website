@@ -3,70 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Students for AI Accessibility - Helping small businesses in New Hyde Park access AI automation for free.">
-    <title>Students for AI Accessibility</title>
+    <meta name="description" content="Student Led Business Solutions is a free, student-run community initiative in New Hyde Park, NY helping local small businesses adopt private, locally-run AI and budgeting tools.">
+    <title>Student Led Business Solutions | Free Local Business Technology in New Hyde Park</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="utility-bar">
+        <strong>100% Free Community Initiative</strong> &middot; Student-led support for local small businesses in New Hyde Park, NY
+    </div>
+
     <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">SFAIA</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <nav class="navbar" aria-label="Primary Navigation">
+            <a href="index.html" class="brand" id="nav-brand">
+                <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="40" height="40" rx="10" fill="#153428"/>
+                    <path d="M12 26V18.5C12 14.91 14.91 12 18.5 12H28V19.5C28 23.09 25.09 26 21.5 26H12Z" fill="#EEF3EF" fill-opacity="0.18"/>
+                    <path d="M13 27L20 13L27 27" stroke="#F7F5F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 22.5H24" stroke="#E7B89C" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <span class="brand-text">
+                    <span class="brand-name">Student Led Business Solutions</span>
+                    <span class="brand-sub">New Hyde Park Nonprofit Initiative</span>
+                </span>
+            </a>
+
+            <ul class="nav-menu" id="primary-nav-menu">
+                <li><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
+                <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+                <li><a href="services.html" class="nav-link" id="nav-services">Services</a></li>
+                <li><a href="how-it-works.html" class="nav-link" id="nav-how-it-works">How It Works</a></li>
+                <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+                <li class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm" id="nav-cta-btn">Request Free Support</a></li>
             </ul>
-            <div class="hamburger">
+
+            <button class="hamburger" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Students for AI Accessibility</h1>
-            <p>Empowering local small businesses in New Hyde Park with free, locally-run AI automation tools.</p>
-            <a href="contact.html" class="btn btn-primary">Request Free AI Assistance</a>
-        </section>
-
-        <div class="container">
-            <section class="section">
-                <div>
-                    <h2 class="section-title">Our Mission</h2>
-                    <p style="text-align: center; max-width: 800px; margin: 0 auto;">We are a student-led organization based in New Hyde Park dedicated to helping small businesses access AI automation for free. We develop and provide locally run AI tools that operate securely on your own business computers, empowering you with modern technology without the cost.</p>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">Current Offering</h2>
-                <div class="card-grid">
-                    <div class="card">
-                        <h3>AI Budgeting Tool</h3>
-                        <p>Our flagship software runs locally on your computer to assist with:</p>
-                        <ul>
-                            <li>Budgeting</li>
-                            <li>Profit projections</li>
-                            <li>Financial decisions</li>
-                        </ul>
-                        <div style="margin-top: 1.5rem;">
-                            <a href="services.html" class="btn btn-secondary">Learn More</a>
-                        </div>
+        <section class="hero-editorial">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <span class="eyebrow">Community-Driven &middot; Zero Cost</span>
+                    <h1>Practical business technology, built by students for our local community.</h1>
+                    <p class="lead">Student Led Business Solutions partners with small businesses in New Hyde Park to install free, locally-run AI and budgeting tools—helping neighborhood shops make confident financial decisions while keeping their data completely private.</p>
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-primary" id="hero-request-btn">Request Free Assistance</a>
+                        <a href="how-it-works.html" class="btn btn-outline" id="hero-how-btn">See How It Works</a>
+                    </div>
+                    <div class="hero-meta">
+                        <span class="hero-meta-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Based in New Hyde Park, NY
+                        </span>
+                        <span class="hero-meta-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            100% Local &amp; Private
+                        </span>
+                        <span class="hero-meta-item">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            In-Person Student Setup
+                        </span>
                     </div>
                 </div>
-            </section>
-        </div>
+
+                <aside class="pledge-card" aria-label="Our Community Pledge">
+                    <div class="mascot-row">
+                        <button type="button" class="mascot-button" id="hero-mascot-btn" aria-label="Say hello to Ollie, the Student Led Business Solutions mascot">
+                            <svg class="mascot-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="40" cy="43" r="33" fill="#EEF3EF"/>
+                                <ellipse cx="19" cy="48" rx="4.5" ry="9" fill="#153428"/>
+                                <ellipse class="mascot-wing-right" cx="61" cy="47" rx="4.5" ry="9" fill="#153428"/>
+                                <rect x="21" y="24" width="38" height="43" rx="19" fill="#1E4A3A"/>
+                                <ellipse cx="40" cy="54" rx="11.5" ry="9.5" fill="#FAF8F4"/>
+                                <polygon points="40,49.5 42.2,51.5 40,53.5 37.8,51.5" fill="#B5582E"/>
+                                <polygon points="40,53.5 42.4,60.5 40,63.5 37.6,60.5" fill="#B5582E"/>
+                                <circle cx="32" cy="39" r="6.5" fill="#FFFFFF"/>
+                                <circle cx="48" cy="39" r="6.5" fill="#FFFFFF"/>
+                                <circle class="mascot-eye" cx="32.5" cy="39" r="3" fill="#153428"/>
+                                <circle class="mascot-eye" cx="48.5" cy="39" r="3" fill="#153428"/>
+                                <polygon points="37,44 43,44 40,49" fill="#B5582E"/>
+                                <rect x="30" y="22" width="20" height="6" rx="2" fill="#153428"/>
+                                <polygon points="40,14 57,20.5 40,26.5 23,20.5" fill="#153428"/>
+                                <line x1="54" y1="21.5" x2="54" y2="29" stroke="#B5582E" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="54" cy="30" r="2" fill="#B5582E"/>
+                                <rect x="31" y="65" width="6" height="3" rx="1.5" fill="#B5582E"/>
+                                <rect x="43" y="65" width="6" height="3" rx="1.5" fill="#B5582E"/>
+                            </svg>
+                        </button>
+                        <div class="mascot-speech">
+                            <span class="mascot-speech-name">Ollie &middot; Student Mascot</span>
+                            <p class="mascot-speech-text">Hi! I&rsquo;m Ollie, our student mascot. Every tool we install is 100% free for local businesses.</p>
+                            <span class="mascot-hint">Click Ollie for another tip</span>
+                        </div>
+                    </div>
+
+                    <h2 class="pledge-card-title">Our Community Pledge</h2>
+                    <p class="pledge-card-intro">We exist to level the playing field for independent neighborhood businesses—never to sell software or collect your data.</p>
+                    <ul class="pledge-list">
+                        <li>
+                            <span class="pledge-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                            </span>
+                            <div>
+                                <strong>Always Free of Charge</strong>
+                                <span>No subscriptions, setup fees, or commercial upsells—our programs are provided entirely free to local businesses.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="pledge-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </span>
+                            <div>
+                                <strong>Your Data Stays on Your Computer</strong>
+                                <span>Every tool we install runs locally on your own business hardware, keeping financial records off external servers.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="pledge-icon" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            </span>
+                            <div>
+                                <strong>Hands-On Local Support</strong>
+                                <span>Our student volunteers visit your shop, handle the installation, and walk you through every feature in person.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="band band-forest">
+            <div class="container">
+                <div class="commitments-grid">
+                    <div class="commitment-item reveal">
+                        <div class="commitment-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3>Accessible Technology</h3>
+                        <p>Bringing practical AI automation to Main Street businesses without enterprise price tags.</p>
+                    </div>
+                    <div class="commitment-item reveal">
+                        <div class="commitment-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <h3>Privacy by Design</h3>
+                        <p>Software operates locally on your computer so sensitive books and projections remain strictly yours.</p>
+                    </div>
+                    <div class="commitment-item reveal">
+                        <div class="commitment-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <h3>Student-Led Service</h3>
+                        <p>Students apply their technical skills to directly strengthen the neighborhood economy.</p>
+                    </div>
+                    <div class="commitment-item reveal">
+                        <div class="commitment-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        </div>
+                        <h3>Built for Real Decisions</h3>
+                        <p>Focused, easy-to-use software designed around day-to-day small business budgeting and planning.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="band band-paper">
+            <div class="container split-grid">
+                <div class="reveal">
+                    <span class="eyebrow">Our Mission</span>
+                    <h2>Bridging the technology gap for New Hyde Park small businesses.</h2>
+                    <p>Modern automation and AI tools are rapidly transforming how large corporations plan budgets and forecast revenue, yet local small businesses are often priced out or overwhelmed by complex cloud subscriptions.</p>
+                    <p>Student Led Business Solutions was created to change that. As a student-led nonprofit initiative based in New Hyde Park, we develop and install locally-run software directly on your business computers—giving you modern capabilities at zero cost.</p>
+                    <div style="margin-top: 1.5rem;">
+                        <a href="about.html" class="btn btn-outline" id="mission-about-btn">Learn About Our Organization</a>
+                    </div>
+                </div>
+
+                <blockquote class="pull-quote reveal">
+                    &ldquo;Every local business owner deserves access to clear, private, modern financial tools—without having to pay for costly software or surrender their data to the cloud.&rdquo;
+                    <cite class="pull-quote-cite">&mdash; Student Led Business Solutions, New Hyde Park, NY</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="band">
+            <div class="container">
+                <div class="section-header centered reveal">
+                    <span class="eyebrow">Current Program</span>
+                    <h2>Our Flagship Offering</h2>
+                    <p>Designed specifically for independent small businesses looking for clarity in their numbers without monthly fees.</p>
+                </div>
+
+                <div class="program-spotlight reveal">
+                    <div>
+                        <span class="card-tag">Available Now &middot; Free</span>
+                        <h3>Local AI Budgeting Tool</h3>
+                        <p>Our flagship software runs directly on your own computer to help you organize expenses, forecast future performance, and make informed business choices with confidence.</p>
+                        <ul class="check-list">
+                            <li>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span><strong>Budgeting:</strong> Track recurring costs and organize monthly operating budgets clearly.</span>
+                            </li>
+                            <li>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span><strong>Profit Projections:</strong> Model revenue scenarios and anticipate seasonal shifts before they happen.</span>
+                            </li>
+                            <li>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span><strong>Financial Decisions:</strong> Compare options using clear, locally generated insights tailored to your shop.</span>
+                            </li>
+                        </ul>
+                        <div class="btn-group">
+                            <a href="services.html" class="btn btn-forest" id="program-details-btn">Explore Program Details</a>
+                            <a href="contact.html" class="btn btn-outline" id="program-request-btn">Schedule Setup</a>
+                        </div>
+                    </div>
+
+                    <div class="privacy-box">
+                        <h4>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Why Local-Only Matters
+                        </h4>
+                        <p>Unlike cloud platforms that upload your financial statements to third-party servers, our AI Budgeting Tool runs entirely on your own computer.</p>
+                        <p>Our student team comes to your New Hyde Park business in person to install, verify, and demonstrate the software so you feel comfortable from day one.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="band band-sage">
+            <div class="container">
+                <div class="section-header centered reveal">
+                    <span class="eyebrow">Simple Onboarding</span>
+                    <h2>How We Work With Your Business</h2>
+                    <p>Getting started takes four straightforward steps—with our students handling all the technical details.</p>
+                </div>
+
+                <ol class="steps-preview">
+                    <li class="step-card reveal">
+                        <span class="step-number">1</span>
+                        <h3>Reach Out</h3>
+                        <p>Contact our team to let us know you are interested in free local business software support.</p>
+                    </li>
+                    <li class="step-card reveal">
+                        <span class="step-number">2</span>
+                        <h3>Schedule a Visit</h3>
+                        <p>We coordinate a convenient time to meet at your New Hyde Park business location.</p>
+                    </li>
+                    <li class="step-card reveal">
+                        <span class="step-number">3</span>
+                        <h3>On-Site Setup</h3>
+                        <p>Our student volunteers install and configure the local AI software directly on your computer.</p>
+                    </li>
+                    <li class="step-card reveal">
+                        <span class="step-number">4</span>
+                        <h3>Live Walkthrough</h3>
+                        <p>We provide a full hands-on demonstration so you and your staff know exactly how to use it.</p>
+                    </li>
+                </ol>
+
+                <div style="text-align: center; margin-top: 2.5rem;">
+                    <a href="how-it-works.html" class="btn btn-outline" id="home-process-btn">Read the Full Process &amp; FAQ</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="band">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <div>
+                        <span class="eyebrow eyebrow-light">Get Involved</span>
+                        <h2>Ready to bring free, private business tools to your shop?</h2>
+                        <p>Whether you are a local business owner looking for support or a student interested in contributing to our community mission, we would love to hear from you.</p>
+                    </div>
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-primary" id="cta-contact-btn">Contact Our Team</a>
+                        <a href="about.html" class="btn btn-outline-light" id="cta-about-btn">Meet Our Mission</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Students for AI Accessibility. Based in New Hyde Park.</p>
-        <p>Empowering local business through accessible AI.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="40" height="40" rx="10" fill="#1E4A3A"/>
+                            <path d="M13 27L20 13L27 27" stroke="#F7F5F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 22.5H24" stroke="#E7B89C" stroke-width="2.4" stroke-linecap="round"/>
+                        </svg>
+                        <span class="brand-text">
+                            <span class="brand-name">Student Led Business Solutions</span>
+                            <span class="brand-sub">New Hyde Park, NY</span>
+                        </span>
+                    </a>
+                    <p>A student-led community initiative dedicated to helping local small businesses access practical, locally-run AI and financial tools completely free of charge.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services &amp; Tools</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Request Free Assistance</a></li>
+                        <li><a href="mailto:studentsforaiaccessability@outlook.com">studentsforaiaccessability@outlook.com</a></li>
+                        <li>New Hyde Park, New York</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Student Led Business Solutions. Based in New Hyde Park, NY.</p>
+                <p>Empowering local small businesses through free, privacy-first technology.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>

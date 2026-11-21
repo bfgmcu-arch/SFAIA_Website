@@ -3,78 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Students for AI Accessibility - A student-led organization in New Hyde Park.">
-    <title>About Us - Students for AI Accessibility</title>
+    <meta name="description" content="Learn about Student Led Business Solutions, a student-led nonprofit initiative in New Hyde Park, NY helping local small businesses access free, locally-run technology.">
+    <title>About Us | Student Led Business Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="utility-bar">
+        <strong>100% Free Community Initiative</strong> &middot; Student-led support for local small businesses in New Hyde Park, NY
+    </div>
+
     <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">SFAIA</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="how-it-works.html" class="nav-link">How It Works</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <nav class="navbar" aria-label="Primary Navigation">
+            <a href="index.html" class="brand" id="nav-brand">
+                <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="40" height="40" rx="10" fill="#153428"/>
+                    <path d="M12 26V18.5C12 14.91 14.91 12 18.5 12H28V19.5C28 23.09 25.09 26 21.5 26H12Z" fill="#EEF3EF" fill-opacity="0.18"/>
+                    <path d="M13 27L20 13L27 27" stroke="#F7F5F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 22.5H24" stroke="#E7B89C" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <span class="brand-text">
+                    <span class="brand-name">Student Led Business Solutions</span>
+                    <span class="brand-sub">New Hyde Park Nonprofit Initiative</span>
+                </span>
+            </a>
+
+            <ul class="nav-menu" id="primary-nav-menu">
+                <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                <li><a href="about.html" class="nav-link active" id="nav-about">About</a></li>
+                <li><a href="services.html" class="nav-link" id="nav-services">Services</a></li>
+                <li><a href="how-it-works.html" class="nav-link" id="nav-how-it-works">How It Works</a></li>
+                <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+                <li class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm" id="nav-cta-btn">Request Free Support</a></li>
             </ul>
-            <div class="hamburger">
+
+            <button class="hamburger" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </nav>
     </header>
 
     <main>
-        <section class="hero" style="padding: 2rem 5%;">
-            <h1>About Us</h1>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow">About Our Organization</span>
+                <h1>Students serving New Hyde Park&rsquo;s independent businesses.</h1>
+                <p class="lead">Student Led Business Solutions is a grassroots, student-run initiative committed to making practical AI and business planning tools accessible to neighborhood shops at no cost.</p>
+            </div>
         </section>
 
-        <div class="container">
-            <section class="section">
-                <div>
-                    <h2 class="section-title">Who We Are</h2>
-                    <p>Students for AI Accessibility is a student-led organization based in New Hyde Park.</p>
-                    <p>Our mission is to help small businesses access AI automation for free.</p>
+        <section class="band band-paper">
+            <div class="container split-grid align-start">
+                <div class="reveal">
+                    <span class="eyebrow">Who We Are</span>
+                    <h2>Neighbors helping neighbors thrive.</h2>
+                    <p>Student Led Business Solutions is based right here in New Hyde Park, NY. We bring together motivated students with a shared purpose: putting modern technology directly into the hands of local small business owners.</p>
+                    <p>Small businesses are the backbone of our community, yet they rarely have dedicated IT teams or the budget for expensive enterprise software. By building and installing locally-run tools for free, we help local owners save time, plan ahead, and stay competitive.</p>
                 </div>
-            </section>
 
-            <section class="section">
-                <div>
-                    <h2 class="section-title">Our History</h2>
-                    <!-- TODO: Add organization history when available -->
-                    <p><em>[Organization history coming soon]</em></p>
+                <div class="privacy-box reveal">
+                    <h4>Our Guiding Commitment</h4>
+                    <p><strong>No Fees, Ever:</strong> Our tools and on-site installation visits are provided completely free to qualifying local businesses.</p>
+                    <p><strong>Local &amp; Private:</strong> We install software directly on your own computer so sensitive financial records stay under your roof.</p>
+                    <p><strong>Community Education:</strong> Students gain meaningful, real-world engineering and service experience while supporting the town they live in.</p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="section">
-                <div>
-                    <h2 class="section-title">Leadership & Team</h2>
-                    <!-- TODO: Add leadership information when available -->
-                    <p><em>[Leadership information coming soon]</em></p>
-
-                    <!-- TODO: Add team members information when available -->
-                    <p><em>[Team members information coming soon]</em></p>
+        <section class="band">
+            <div class="container">
+                <div class="section-header centered reveal">
+                    <span class="eyebrow">Core Values</span>
+                    <h2>What Guides Our Work</h2>
                 </div>
-            </section>
 
-            <section class="section">
-                <div>
-                    <h2 class="section-title">Looking Forward</h2>
-                    <!-- TODO: Add mission expansion details when available -->
-                    <p><em>[Mission expansion details coming soon]</em></p>
+                <div class="card-grid">
+                    <article class="card reveal">
+                        <span class="card-tag">01 &middot; Access</span>
+                        <h3>Technology Without Barriers</h3>
+                        <p>Financial planning and automation tools shouldn&rsquo;t belong exclusively to large corporations. We remove cost and technical complexity so any local shop can benefit.</p>
+                    </article>
+
+                    <article class="card reveal">
+                        <span class="card-tag">02 &middot; Trust</span>
+                        <h3>Complete Data Ownership</h3>
+                        <p>Small business finances are personal and sensitive. Every solution we offer is designed to run locally on your machine—never relying on external cloud data harvesting.</p>
+                    </article>
+
+                    <article class="card reveal">
+                        <span class="card-tag">03 &middot; Service</span>
+                        <h3>In-Person Partnership</h3>
+                        <p>We don&rsquo;t just hand over a download link. Our students show up in person, configure the software properly, and make sure you feel confident using it.</p>
+                    </article>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
+        <section class="band band-sage">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Growing Together</span>
+                    <h2>Our Story, Team &amp; Future</h2>
+                </div>
+
+                <div class="card-grid">
+                    <article class="card reveal">
+                        <h3>Our History</h3>
+                        <!-- TODO: Add organization history when available -->
+                        <p>Founded in New Hyde Park by students passionate about community service and accessible technology, Student Led Business Solutions began with a simple goal: helping neighborhood businesses navigate modern tools without the cost. Our full founding story will be shared here soon.</p>
+                    </article>
+
+                    <article class="card reveal">
+                        <h3>Leadership &amp; Team</h3>
+                        <!-- TODO: Add leadership information when available -->
+                        <!-- TODO: Add team members information when available -->
+                        <p>Our organization is led and staffed entirely by local student volunteers who design, test, and install our community tools. Profiles of our student leaders and volunteers are coming soon.</p>
+                    </article>
+
+                    <article class="card reveal">
+                        <h3>Looking Forward</h3>
+                        <!-- TODO: Add mission expansion details when available -->
+                        <p>As we partner with more New Hyde Park businesses, we are listening closely to local needs to guide our next generation of free, locally-run tools and community workshops. Expansion updates will be posted here as we grow.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="band">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <div class="cta-mascot-wrap">
+                        <button type="button" class="mascot-button" id="about-mascot-btn" aria-label="Wave to Ollie the mascot">
+                            <svg class="mascot-svg mascot-svg-sm" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <circle cx="40" cy="43" r="33" fill="rgba(255,255,255,0.12)"/>
+                                <ellipse cx="19" cy="48" rx="4.5" ry="9" fill="#0F261D"/>
+                                <ellipse class="mascot-wing-right" cx="61" cy="47" rx="4.5" ry="9" fill="#0F261D"/>
+                                <rect x="21" y="24" width="38" height="43" rx="19" fill="#29614C"/>
+                                <ellipse cx="40" cy="54" rx="11.5" ry="9.5" fill="#FAF8F4"/>
+                                <polygon points="40,49.5 42.2,51.5 40,53.5 37.8,51.5" fill="#B5582E"/>
+                                <polygon points="40,53.5 42.4,60.5 40,63.5 37.6,60.5" fill="#B5582E"/>
+                                <circle cx="32" cy="39" r="6.5" fill="#FFFFFF"/>
+                                <circle cx="48" cy="39" r="6.5" fill="#FFFFFF"/>
+                                <circle class="mascot-eye" cx="32.5" cy="39" r="3" fill="#153428"/>
+                                <circle class="mascot-eye" cx="48.5" cy="39" r="3" fill="#153428"/>
+                                <polygon points="37,44 43,44 40,49" fill="#E7B89C"/>
+                                <rect x="30" y="22" width="20" height="6" rx="2" fill="#0F261D"/>
+                                <polygon points="40,14 57,20.5 40,26.5 23,20.5" fill="#0F261D"/>
+                                <line x1="54" y1="21.5" x2="54" y2="29" stroke="#E7B89C" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="54" cy="30" r="2" fill="#E7B89C"/>
+                                <rect x="31" y="65" width="6" height="3" rx="1.5" fill="#E7B89C"/>
+                                <rect x="43" y="65" width="6" height="3" rx="1.5" fill="#E7B89C"/>
+                            </svg>
+                        </button>
+                        <div>
+                            <span class="eyebrow eyebrow-light">Partner With Us</span>
+                            <h2>Want to work with Student Led Business Solutions?</h2>
+                            <p>Reach out to schedule a free consultation for your small business, or connect with us to learn how you can support our student-led mission.</p>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-primary" id="about-contact-btn">Get in Touch</a>
+                        <a href="services.html" class="btn btn-outline-light" id="about-services-btn">View Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Students for AI Accessibility. Based in New Hyde Park.</p>
-        <p>Empowering local business through accessible AI.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="40" height="40" rx="10" fill="#1E4A3A"/>
+                            <path d="M13 27L20 13L27 27" stroke="#F7F5F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 22.5H24" stroke="#E7B89C" stroke-width="2.4" stroke-linecap="round"/>
+                        </svg>
+                        <span class="brand-text">
+                            <span class="brand-name">Student Led Business Solutions</span>
+                            <span class="brand-sub">New Hyde Park, NY</span>
+                        </span>
+                    </a>
+                    <p>A student-led community initiative dedicated to helping local small businesses access practical, locally-run AI and financial tools completely free of charge.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services &amp; Tools</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Request Free Assistance</a></li>
+                        <li><a href="mailto:studentsforaiaccessability@outlook.com">studentsforaiaccessability@outlook.com</a></li>
+                        <li>New Hyde Park, New York</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Student Led Business Solutions. Based in New Hyde Park, NY.</p>
+                <p>Empowering local small businesses through free, privacy-first technology.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>

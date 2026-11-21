@@ -3,105 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="How it works - Process for getting free AI assistance from Students for AI Accessibility.">
-    <title>How It Works - Students for AI Accessibility</title>
+    <meta name="description" content="Learn our simple 4-step process for receiving free, locally-run business software and in-person installation from Student Led Business Solutions.">
+    <title>How It Works | Student Led Business Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .steps {
-            list-style: none;
-            counter-reset: my-awesome-counter;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .step-item {
-            position: relative;
-            margin-bottom: 3rem;
-            padding-left: 4rem;
-        }
-        .step-item::before {
-            counter-increment: my-awesome-counter;
-            content: counter(my-awesome-counter);
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 50%;
-            background-color: var(--secondary-blue);
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1.25rem;
-            box-shadow: 0 4px 10px rgba(0, 86, 210, 0.3);
-        }
-        .step-item h3 {
-            margin-bottom: 0.5rem;
-        }
-    </style>
 </head>
 <body>
+    <div class="utility-bar">
+        <strong>100% Free Community Initiative</strong> &middot; Student-led support for local small businesses in New Hyde Park, NY
+    </div>
+
     <header>
-        <nav class="navbar">
-            <a href="index.html" class="logo">SFAIA</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="how-it-works.html" class="nav-link active">How It Works</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <nav class="navbar" aria-label="Primary Navigation">
+            <a href="index.html" class="brand" id="nav-brand">
+                <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect width="40" height="40" rx="10" fill="#153428"/>
+                    <path d="M12 26V18.5C12 14.91 14.91 12 18.5 12H28V19.5C28 23.09 25.09 26 21.5 26H12Z" fill="#EEF3EF" fill-opacity="0.18"/>
+                    <path d="M13 27L20 13L27 27" stroke="#F7F5F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 22.5H24" stroke="#E7B89C" stroke-width="2.4" stroke-linecap="round"/>
+                </svg>
+                <span class="brand-text">
+                    <span class="brand-name">Student Led Business Solutions</span>
+                    <span class="brand-sub">New Hyde Park Nonprofit Initiative</span>
+                </span>
+            </a>
+
+            <ul class="nav-menu" id="primary-nav-menu">
+                <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+                <li><a href="services.html" class="nav-link" id="nav-services">Services</a></li>
+                <li><a href="how-it-works.html" class="nav-link active" id="nav-how-it-works">How It Works</a></li>
+                <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+                <li class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm" id="nav-cta-btn">Request Free Support</a></li>
             </ul>
-            <div class="hamburger">
+
+            <button class="hamburger" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </nav>
     </header>
 
     <main>
-        <section class="hero" style="padding: 2rem 5%;">
-            <h1>How It Works</h1>
-            <p>Our simple 4-step process to getting started.</p>
+        <section class="page-header">
+            <div class="container">
+                <span class="eyebrow">Step-by-Step Process</span>
+                <h1>How It Works</h1>
+                <p class="lead">A straightforward, four-step onboarding experience designed around busy small business owners—no technical background required.</p>
+            </div>
         </section>
 
-        <div class="container">
-            <section class="section">
-                <div>
-                    <h2 class="section-title">The Process</h2>
-                    <ol class="steps">
-                        <li class="step-item">
-                            <h3>Business Contacts Organization</h3>
-                            <p>Reach out to us to express your interest in receiving free AI assistance for your small business.</p>
-                        </li>
-                        <li class="step-item">
-                            <h3>Appointment is Scheduled</h3>
-                            <p>We will get back to you to set up a convenient time to meet at your business location.</p>
-                        </li>
-                        <li class="step-item">
-                            <h3>Students Install the Software</h3>
-                            <p>Our student team will arrive at your location and install the local AI software on your computers.</p>
-                        </li>
-                        <li class="step-item">
-                            <h3>Demonstration is Provided</h3>
-                            <p>After installation, we will provide a complete demonstration of the software so you know exactly how to use it.</p>
-                        </li>
-                    </ol>
-                    <div style="text-align: center; margin-top: 4rem;">
-                        <a href="contact.html" class="btn btn-secondary">Get Started Today</a>
+        <section class="band">
+            <div class="container container-narrow">
+                <div class="section-header centered reveal">
+                    <span class="eyebrow">Four Simple Steps</span>
+                    <h2>From First Message to Ready-to-Use Software</h2>
+                </div>
+
+                <ol class="timeline">
+                    <li class="timeline-item reveal">
+                        <span class="timeline-badge" aria-hidden="true">1</span>
+                        <div class="timeline-content">
+                            <h3>Business Contacts Our Organization</h3>
+                            <p>Reach out to Student Led Business Solutions by email or through our contact page to express your interest in receiving free AI budgeting and business software assistance.</p>
+                            <span class="timeline-meta">No obligation &middot; 100% free</span>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item reveal">
+                        <span class="timeline-badge" aria-hidden="true">2</span>
+                        <div class="timeline-content">
+                            <h3>Appointment Is Scheduled</h3>
+                            <p>A member of our student team will follow up promptly to answer any initial questions and coordinate a convenient time to visit your business location in New Hyde Park.</p>
+                            <span class="timeline-meta">Flexible scheduling around your hours</span>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item reveal">
+                        <span class="timeline-badge" aria-hidden="true">3</span>
+                        <div class="timeline-content">
+                            <h3>Students Install the Software Locally</h3>
+                            <p>Our student volunteers arrive at your shop, install our local AI software directly onto your business computer, and verify that everything is configured securely and running smoothly.</p>
+                            <span class="timeline-meta">Runs locally &middot; Zero cloud uploads</span>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item reveal">
+                        <span class="timeline-badge" aria-hidden="true">4</span>
+                        <div class="timeline-content">
+                            <h3>Hands-On Demonstration Is Provided</h3>
+                            <p>Once installed, we walk you through the software step by step—showing you how to manage budgets, review profit projections, and get the most value from your new tool.</p>
+                            <span class="timeline-meta">Clear, jargon-free training</span>
+                        </div>
+                    </li>
+                </ol>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="contact.html" class="btn btn-primary" id="how-get-started-btn">Get Started Today</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="band band-paper">
+            <div class="container container-narrow">
+                <div class="section-header centered reveal">
+                    <span class="eyebrow">Common Questions</span>
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Answers to what local business owners most often ask before scheduling a visit.</p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item open">
+                        <button class="faq-question" id="faq-btn-1" aria-expanded="true" aria-controls="faq-ans-1">
+                            <span>Is this service really completely free?</span>
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer" id="faq-ans-1">
+                            Yes. Student Led Business Solutions is a free, student-led community initiative. There are no setup fees, monthly subscriptions, or hidden costs for our software or in-person installation.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" id="faq-btn-2" aria-expanded="false" aria-controls="faq-ans-2">
+                            <span>Does my business&rsquo;s financial data get uploaded to the cloud?</span>
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer" id="faq-ans-2">
+                            No. Protecting your privacy is one of our core principles. Our AI Budgeting Tool runs locally on your own business computer, so your financial data stays exclusively with you.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" id="faq-btn-3" aria-expanded="false" aria-controls="faq-ans-3">
+                            <span>Do I need technical experience to use the software?</span>
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer" id="faq-ans-3">
+                            Not at all. Our students handle the entire technical installation and provide a full, plain-language demonstration so you feel comfortable using the tool on your own.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" id="faq-btn-4" aria-expanded="false" aria-controls="faq-ans-4">
+                            <span>Where does Student Led Business Solutions currently serve?</span>
+                            <svg class="faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                        </button>
+                        <div class="faq-answer" id="faq-ans-4">
+                            We are based in New Hyde Park, NY and focus on supporting local small businesses in our surrounding community. Reach out to us to confirm availability for your location.
+                        </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2023 Students for AI Accessibility. Based in New Hyde Park.</p>
-        <p>Empowering local business through accessible AI.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand">
+                        <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <rect width="40" height="40" rx="10" fill="#1E4A3A"/>
+                            <path d="M13 27L20 13L27 27" stroke="#F7F5F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 22.5H24" stroke="#E7B89C" stroke-width="2.4" stroke-linecap="round"/>
+                        </svg>
+                        <span class="brand-text">
+                            <span class="brand-name">Student Led Business Solutions</span>
+                            <span class="brand-sub">New Hyde Park, NY</span>
+                        </span>
+                    </a>
+                    <p>A student-led community initiative dedicated to helping local small businesses access practical, locally-run AI and financial tools completely free of charge.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services &amp; Tools</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Request Free Assistance</a></li>
+                        <li><a href="mailto:studentsforaiaccessability@outlook.com">studentsforaiaccessability@outlook.com</a></li>
+                        <li>New Hyde Park, New York</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Student Led Business Solutions. Based in New Hyde Park, NY.</p>
+                <p>Empowering local small businesses through free, privacy-first technology.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
