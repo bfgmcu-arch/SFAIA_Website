@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.getElementById('contact-name')?.value.trim() || '';
             const business = document.getElementById('contact-business')?.value.trim() || '';
             const contactInfo = document.getElementById('contact-email')?.value.trim() || '';
-            const service = document.getElementById('contact-topic')?.value || 'AI Budgeting Tool (Full Setup)';
+            const service = document.getElementById('contact-topic')?.value || 'AI Budgeting Tool';
             const message = document.getElementById('contact-message')?.value.trim() || '';
             return {
                 _subject: `Setup Request: ${service}${business ? ` (${business})` : ''}`,
