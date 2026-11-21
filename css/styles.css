@@ -280,7 +280,7 @@ header {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 1.85rem;
+    gap: 1.4rem;
 }
 
 .nav-link {
