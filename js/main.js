@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             feedback.classList.remove('visible', 'error');
 
             try {
-                const response = await fetch('https://formsubmit.co/ajax/studentsforaiaccessability@outlook.com', {
+                const response = await fetch('https://formsubmit.co/ajax/studentledbusinesssolutions@gmail.com', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 feedback.innerHTML = successHtml;
                 feedback.classList.add('visible');
             } catch {
-                feedback.innerHTML = 'We could not send your request right now. Please try again in a moment, or reach us directly at <a href="mailto:studentsforaiaccessability@outlook.com">studentsforaiaccessability@outlook.com</a>.';
+                feedback.innerHTML = 'We could not send your request right now. Please try again in a moment, or reach us directly at <a href="mailto:studentledbusinesssolutions@gmail.com">studentledbusinesssolutions@gmail.com</a>.';
                 feedback.classList.add('visible', 'error');
             } finally {
                 if (submitBtn) {
