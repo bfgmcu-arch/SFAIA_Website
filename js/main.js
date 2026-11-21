@@ -1,20 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    /* 1. Top Reading Progress Bar */
-    const progressBar = document.createElement('div');
-    progressBar.className = 'scroll-progress';
-    progressBar.setAttribute('aria-hidden', 'true');
-    document.body.prepend(progressBar);
-
-    const updateProgress = () => {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const pct = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
-        progressBar.style.width = `${pct}%`;
-    };
-    window.addEventListener('scroll', updateProgress, { passive: true });
-    updateProgress();
-
-    /* 2. Mobile Navigation Drawer */
+    /* Mobile Navigation Drawer */
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
@@ -44,35 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* 3. Simple Mascot Interaction (Hop, Wave & Friendly Tips) */
-    const mascotTips = [
-        'Hi! I\'m Ollie, our student mascot. Every tool we install is 100% free for local businesses.',
-        'Your financial records stay right on your own computer—never uploaded to external servers.',
-        'No tech experience needed! Our New Hyde Park student team comes to your shop to set it up.',
-        'Curious how it works? Reach out anytime for a free, no-pressure walkthrough.'
-    ];
-
-    document.querySelectorAll('.mascot-button').forEach((button) => {
-        let tipIndex = 0;
-        const speechEl = button.closest('.mascot-row')?.querySelector('.mascot-speech-text');
-
-        button.addEventListener('click', () => {
-            button.classList.remove('is-hopping');
-            void button.offsetWidth; // restart animation
-            button.classList.add('is-hopping');
-
-            if (speechEl) {
-                tipIndex = (tipIndex + 1) % mascotTips.length;
-                speechEl.style.opacity = '0';
-                setTimeout(() => {
-                    speechEl.textContent = mascotTips[tipIndex];
-                    speechEl.style.opacity = '1';
-                }, 160);
-            }
-        });
-    });
-
-    /* 4. FAQ Accordion */
+    /* FAQ Accordion */
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach((item) => {
         const button = item.querySelector('.faq-question');
@@ -84,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* 5. Copy Email Button */
+    /* Copy Email Button */
     const copyButtons = document.querySelectorAll('[data-copy-email]');
     copyButtons.forEach((btn) => {
         btn.addEventListener('click', async () => {
@@ -104,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* 6. Contact Inquiry Form (Static Mailto Composer) */
+    /* Contact Form (Opens pre-filled email) */
     const contactForm = document.getElementById('contact-request-form');
     const formFeedback = document.getElementById('form-feedback');
 
@@ -119,25 +76,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const message = document.getElementById('contact-message')?.value.trim() || '';
 
             const recipient = 'studentsforaiaccessability@outlook.com';
-            const subject = `[SLBS Inquiry] ${topic}${business ? ` - ${business}` : ''}`;
+            const subject = `SLBS Inquiry: ${topic}${business ? ` (${business})` : ''}`;
             const bodyLines = [
-                'Hello Student Led Business Solutions team,',
+                'Hi Student Led Business Solutions team,',
                 '',
                 `Name: ${name}`,
-                business ? `Business / Organization: ${business}` : null,
-                `Reply Email: ${email}`,
-                `Inquiry Type: ${topic}`,
+                business ? `Business: ${business}` : null,
+                `Email: ${email}`,
+                `Topic: ${topic}`,
                 '',
                 'Message:',
-                message || 'I would like to learn more about your free local business solutions.',
+                message || 'I would like to learn more about setting up your free budgeting tool.',
             ].filter((line) => line !== null);
 
             const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
 
             formFeedback.innerHTML = `
-                <strong>Your message draft is ready.</strong> We opened your email client addressed to
+                <strong>Your email draft is ready.</strong> We opened your email app addressed to
                 <a href="mailto:${recipient}">${recipient}</a>. If it did not open automatically,
-                <a href="${mailtoUrl}">click here to open the pre-filled email</a>.
+                <a href="${mailtoUrl}">click here to open the draft</a>.
             `;
             formFeedback.classList.add('visible');
 
@@ -145,18 +102,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* 7. Staggered Scroll Reveal */
+    /* Staggered Scroll Reveal */
     const staggerContainers = document.querySelectorAll('.commitments-grid, .card-grid, .steps-preview, .timeline');
     staggerContainers.forEach((container) => {
         const items = container.querySelectorAll('.reveal');
         items.forEach((item, idx) => {
-            item.style.setProperty('--reveal-delay', `${idx * 85}ms`);
+            item.style.setProperty('--reveal-delay', `${idx * 60}ms`);
         });
     });
 
     const revealEls = document.querySelectorAll('.reveal');
-    if (revealEls.length > 0) {
-        if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (revealEls.length > 0 && 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const viewportH = window.innerHeight || document.documentElement.clientHeight;
+        const belowFold = [];
+
+        revealEls.forEach((el) => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < viewportH * 0.96) {
+                el.classList.add('is-visible');
+            } else {
+                belowFold.push(el);
+            }
+        });
+
+        if (belowFold.length > 0) {
+            document.documentElement.classList.add('js-reveal');
             const observer = new IntersectionObserver(
                 (entries) => {
                     entries.forEach((entry) => {
@@ -166,11 +136,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                     });
                 },
-                { threshold: 0.1 }
+                { threshold: 0.02 }
             );
-            revealEls.forEach((el) => observer.observe(el));
-        } else {
-            revealEls.forEach((el) => el.classList.add('is-visible'));
+            belowFold.forEach((el) => observer.observe(el));
         }
     }
 });
