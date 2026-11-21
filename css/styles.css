@@ -1058,6 +1058,18 @@ header {
     display: block;
 }
 
+.form-feedback.error {
+    background-color: var(--clay-soft);
+    border-color: var(--clay);
+    color: var(--ink);
+}
+
+.btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
 /* Community CTA Banner */
 .cta-banner {
     background-color: var(--forest-deep);

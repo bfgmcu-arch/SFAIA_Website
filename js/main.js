@@ -61,44 +61,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    /* Contact Form (Opens pre-filled email) */
+    /* Interest Notification Form (Direct submission, no email client needed) */
     const contactForm = document.getElementById('contact-request-form');
     const formFeedback = document.getElementById('form-feedback');
+    const submitBtn = document.getElementById('contact-submit-btn');
 
     if (contactForm && formFeedback) {
-        contactForm.addEventListener('submit', (event) => {
+        contactForm.addEventListener('submit', async (event) => {
             event.preventDefault();
 
             const name = document.getElementById('contact-name')?.value.trim() || '';
             const business = document.getElementById('contact-business')?.value.trim() || '';
-            const email = document.getElementById('contact-email')?.value.trim() || '';
+            const contactInfo = document.getElementById('contact-email')?.value.trim() || '';
             const topic = document.getElementById('contact-topic')?.value || 'Free AI Budgeting Setup';
             const message = document.getElementById('contact-message')?.value.trim() || '';
 
-            const recipient = 'studentsforaiaccessability@outlook.com';
-            const subject = `SLBS Inquiry: ${topic}${business ? ` (${business})` : ''}`;
-            const bodyLines = [
-                'Hi Student Led Business Solutions team,',
-                '',
-                `Name: ${name}`,
-                business ? `Business: ${business}` : null,
-                `Email: ${email}`,
-                `Topic: ${topic}`,
-                '',
-                'Message:',
-                message || 'I would like to learn more about setting up your free budgeting tool.',
-            ].filter((line) => line !== null);
+            const originalBtnText = submitBtn ? submitBtn.textContent : '';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Notifying team...';
+            }
 
-            const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+            formFeedback.classList.remove('visible', 'error');
 
-            formFeedback.innerHTML = `
-                <strong>Your email draft is ready.</strong> We opened your email app addressed to
-                <a href="mailto:${recipient}">${recipient}</a>. If it did not open automatically,
-                <a href="${mailtoUrl}">click here to open the draft</a>.
-            `;
-            formFeedback.classList.add('visible');
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/studentsforaiaccessability@outlook.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Accept: 'application/json',
+                    },
+                    body: JSON.stringify({
+                        _subject: `New Interest: ${topic}${business ? ` (${business})` : ''}`,
+                        _template: 'table',
+                        _captcha: 'false',
+                        Name: name,
+                        Business: business || 'Not specified',
+                        'Contact Info': contactInfo,
+                        Interest: topic,
+                        Note: message || 'Interested in learning more.',
+                    }),
+                });
 
-            window.location.href = mailtoUrl;
+                if (!response.ok) {
+                    throw new Error('Submission failed');
+                }
+
+                contactForm.reset();
+                formFeedback.innerHTML = '<strong>Thanks!</strong> We have been notified that you are interested and someone from our team will reach out soon.';
+                formFeedback.classList.add('visible');
+            } catch {
+                formFeedback.innerHTML = 'We could not send the notification right now. Please try again in a moment, or reach us directly at <a href="mailto:studentsforaiaccessability@outlook.com">studentsforaiaccessability@outlook.com</a>.';
+                formFeedback.classList.add('visible', 'error');
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalBtnText;
+                }
+            }
         });
     }
 
