@@ -157,6 +157,15 @@ document.addEventListener('DOMContentLoaded', () => {
         successHtml: '<strong>Thanks for offering to help!</strong> Our team has been notified and will follow up with you soon.',
     });
 
+    /* Subtle click-to-hop on Ollie illustrations */
+    document.querySelectorAll('.ollie-scene').forEach((el) => {
+        el.addEventListener('click', () => {
+            el.classList.remove('is-hopping');
+            void el.offsetWidth;
+            el.classList.add('is-hopping');
+        });
+    });
+
     /* Staggered Scroll Reveal */
     const staggerContainers = document.querySelectorAll('.commitments-grid, .card-grid, .steps-preview, .timeline');
     staggerContainers.forEach((container) => {

@@ -1401,6 +1401,45 @@ footer {
     gap: 1.5rem;
 }
 
+/* Contextual Ollie Illustrations */
+.ollie-inline-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.15rem;
+}
+
+.ollie-inline-header h2,
+.ollie-inline-header h3,
+.ollie-inline-header h4 {
+    margin-bottom: 0;
+}
+
+.ollie-scene {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    display: block;
+    overflow: visible;
+    animation: mascotFloat 3.8s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.ollie-scene-lg {
+    width: 84px;
+    height: 84px;
+}
+
+.ollie-scene:hover .mascot-wing-right {
+    animation: mascotWave 0.7s ease-in-out;
+}
+
+.ollie-centered {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
 /* Staggered Scroll Reveal Animation */
 .js-reveal .reveal {
     opacity: 0;
@@ -1411,6 +1450,10 @@ footer {
 .js-reveal .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.ollie-scene.is-hopping {
+    animation: mascotHop 0.45s var(--ease);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1424,6 +1467,7 @@ footer {
     .page-header .container > *,
     .pledge-card,
     .mascot-svg,
+    .ollie-scene,
     .mascot-eye,
     .mascot-wing-right,
     .faq-item.open .faq-answer {
